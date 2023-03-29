@@ -8,7 +8,8 @@ import App from './components/App';
 
 const root = createRoot(document.getElementById('root'))
 
-const store = legacy_createStore(reducer)
+const store = legacy_createStore(reducer,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 	
 	root.render(
 		<Provider store={store}>
